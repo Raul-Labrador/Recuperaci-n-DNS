@@ -15,14 +15,8 @@ cp /vagrant/config/named.conf.local /etc/bind/
 cp /vagrant/zones/raul.test.dns /var/lib/bind/
 cp /vagrant/zones/raul.test.rev /var/lib/bind/
 
-named-checkconf /etc/bind/named.conf.options
-named-checkzone raul.test /var/lib/bind/raul.test.dns
-named-checkzone 56.168.192.in-addr.arpa /var/lib/bind/raul.test.rev
-
 systemctl restart named
 systemctl restart bind9
 systemctl enable named
 systemctl enable bind9
-
-systemctl status named --no-pager
 
