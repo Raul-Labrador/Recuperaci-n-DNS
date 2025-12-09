@@ -36,3 +36,6 @@ Vemos que el contenedor está ejecutadp y corriendo de manera correcta.
 
 Y ahora al hacer el ping con nslookup, podemos ver que nos devuelve la IP correcta y el nombre correcto.
 ![VagrantFile](img/nslookup.png)
+
+Fernando, he tenido un problema y es que no se me han ido subiendo los commits que he ido haciendo del trabajo, en el repositorio solo sale uno pero tengo varios:
+![VagrantFile](img/commits.png)
