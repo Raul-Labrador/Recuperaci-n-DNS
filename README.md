@@ -33,3 +33,6 @@ Ahora que ya tengo el composer configurado, solo tenemos que ejectuar el comando
 ## 3. Comprobación 
 Vemos que el contenedor está ejecutadp y corriendo de manera correcta.
 ![VagrantFile](img/docker-compose-ps.png)
+
+Y ahora al hacer el ping con nslookup, podemos ver que nos devuelve la IP correcta y el nombre correcto.
+![VagrantFile](img/nslookup.png)
