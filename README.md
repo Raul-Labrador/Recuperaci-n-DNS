@@ -16,4 +16,20 @@ Por tanto para esta práctica me he pasado los archivos pertinentes.
  - bootstrap.sh
 ![VagrantFile](img/bootstrap.png)
 
-## 2. 
+## 2. Montaje en Docker
+Primero he realizado un pull, de la imagen proporcionada para crear el contenedor.
+He creado un archivo docker-compose.yml para montar el contenedor. 
+Aqui le decimos que dentro de servicios tendrá un servicio llamado dns_server, le pasamos la imagen que vamos a usar, le damos un nombre al contenedor y le decimos que este funcionando hasta que el yo lo detenga.
+
+Luego le mapeamos los puertos, para asegurarnos de que el DNS va a funcionar de manera correcta. 
+Y le pasamos los archivos necesarios, en mi caso le voy a pasar el archivo de configuración llamado `named.conf.local` y `named.conf.options`, además de la carpeta `zones` que contiene los archivos `raul.test.dns` y `raul.test.rev`.
+
+![VagrantFile](img/docker-compose.png)
+
+Ahora que ya tengo el composer configurado, solo tenemos que ejectuar el comando `docker-compose up -d` y ver el resultado.
+
+![VagrantFile](img/docker-compose-up.png)
+
+## 3. Comprobación 
+Vemos que el contenedor está ejecutadp y corriendo de manera correcta.
+![VagrantFile](img/docker-compose-ps.png)
